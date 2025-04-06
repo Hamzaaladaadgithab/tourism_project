@@ -31,7 +31,7 @@ const Categories_data = const [
   ),
   Category(
     id: 'c5',
-    title: 'TARİHİ ŞEHİRLER',
+    title: 'ŞEHİRLER',
     imageUrl:
         'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjR8fHRyYXZlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60', 
   ),
