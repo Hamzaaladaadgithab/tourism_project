@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import '../models/trip.dart';
 
 class TripItem extends StatelessWidget { 
@@ -50,8 +51,34 @@ class TripItem extends StatelessWidget {
                     width: double.infinity,
                     fit:BoxFit.cover,
                     ),
-                )
+                ),
+                Container(
+                  height:250,
+                  alignment: Alignment.bottomRight,
+                  padding:EdgeInsets.symmetric(
+                    vertical:10,
+                    horizontal: 20,
+                  ),
+                  decoration:BoxDecoration(
+                    gradient:LinearGradient(
+                    begin:Alignment.topCenter,
+                    end:Alignment.bottomCenter,
+                    colors:[
+                      Colors.black.withAlpha(0),
+                      Colors.black.withAlpha(204),
+                    ],
+                    stops:[0.6, 1],
 
+                    )
+                  ),
+                  child: Text(
+                   title,
+                  style: Theme.of(context).textTheme.headlineMedium
+                  ?.copyWith(color: Colors.white),
+                  overflow: TextOverflow.fade,
+                          
+                  ),
+                ),
               ],
             )
           ],
