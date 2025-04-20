@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tourism/models/trip.dart';
+import '../widgets/trip_item.dart';
 import '../app_data.dart';
 
 class CategoryTripsScreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class CategoryTripsScreen extends StatelessWidget {
     final categoryTitle = routeArgs['title'] ?? 'Kategori Gezileri';
     final categoryId = routeArgs['id'];
 
-    final filterdTrps = Trips_data.where((trip){
+    final filteredTrips = Trips_data.where((trip){
 
       return trip.categories.contains(categoryId);
     
@@ -25,9 +26,15 @@ class CategoryTripsScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
-          return Text(filterdTrps[index].title);
+          return  TripItem(
+            title:filteredTrips[index].title, 
+            imageUrl:filteredTrips[index].imageUrl,
+            duration:filteredTrips[index].duration,
+            season:filteredTrips[index].season, 
+            tripType:filteredTrips[index].tripType,
+            );
         },
-        itemCount: filterdTrps.length,
+        itemCount: filteredTrips.length,
       ),
     );
   }
