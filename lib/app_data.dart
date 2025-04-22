@@ -207,7 +207,7 @@ const Trips_data = const [
     categories: ['c3'],
     title: 'Birinci Sahil',
     tripType: TripType.Exploration,
-    season: Season.winter,
+    season: Season.summer,
     imageUrl:
         'https://images.unsplash.com/photo-1493558103817-58b2924bce98?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAxfHxiZWFjaHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
     duration: ['20 gün'],
@@ -285,7 +285,7 @@ const Trips_data = const [
     categories: ['c4'],
     title: 'Büyük Çöl',
     tripType: TripType.Activities,
-    season: Season.winter,
+    season: Season.spring,
     imageUrl:
         'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZGVzZXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     duration: ['30 gün'],
@@ -311,7 +311,7 @@ const Trips_data = const [
     categories: ['c4', 'c1'],
     title: 'Batı Çölü',
     tripType: TripType.Activities,
-    season: Season.winter,
+    season: Season.summer,
     imageUrl:
         'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
     duration: ['30 gün'],
@@ -337,7 +337,7 @@ const Trips_data = const [
     categories: ['c4'],
     title: 'Kumlu Çöl',
     tripType: TripType.Activities,
-    season: Season.winter,
+    season: Season.summer,
     imageUrl:
         'https://images.unsplash.com/photo-1452022582947-b521d8779ab6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODN8fGRlc2VydHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
     duration: ['30 gün'],
@@ -364,7 +364,7 @@ const Trips_data = const [
   categories: ['c5'],
   title: 'Birinci Şehir',
   tripType: TripType.Activities,
-  season: Season.winter,
+  season: Season.summer,
   imageUrl:
       'https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fHRyYXZlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
   duration: ['30 gün'],
@@ -390,7 +390,7 @@ Trip(
   categories: ['c5'],
   title: 'İkinci Şehir',
   tripType: TripType.Activities,
-  season: Season.winter,
+  season: Season.spring,
   imageUrl:
       'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjR8fHRyYXZlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
   duration: ['30 gün'],

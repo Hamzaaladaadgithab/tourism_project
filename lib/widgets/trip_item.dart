@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../models/trip.dart';
@@ -17,9 +18,48 @@ class TripItem extends StatelessWidget {
     required this.season,
     required this.tripType,
   });
+
+String get seasonText {
+  switch (season) {
+    case Season.winter:
+      return 'KIŞ';
+    case Season.spring:
+      return 'BAHAR';
+    case Season.summer:
+      return 'YAZ';
+    case Season.autumn:
+      return 'SONBAHAR';
+    default:
+      return 'Bilinmeyen';
+  }
+}    
+
+String get TripTypeText {
+  switch (tripType) {
+    case TripType.Exploration:
+      return 'Keşifetme';
+
+    case TripType.Recovery:
+      return 'İyileşmek'; 
+
+    case TripType.Activities:
+      return 'Aktiviteler'; 
+
+    case TripType.Therapy:
+      return 'iyileştirme';
+
+    default:
+      return 'Bilinmeyen';
+  }
+} 
+
+
+
+
   
    void selectTrip(){
 
+    // Navigator.of().pushNamed();
    }
    
   @override
@@ -80,15 +120,59 @@ class TripItem extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
+            Padding(  
+
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                mainAxisAlignment:MainAxisAlignment.spaceAround,
+                children: [  
+                  Row(
+                    children: [
+                      Icon(Icons.today , color: Theme.of(context).
+                      colorScheme.secondary,),
+                      SizedBox(
+                        width:6,
+                      ),
+                      Text('$duration')
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.wb_sunny, color: Theme.of(context).
+                      colorScheme.secondary,),
+                      SizedBox(
+                        width:6,
+                      ),
+                      Text(seasonText)
+                    ],
+                  ),
+
+                   Row(
+                    children: [
+                      Icon(
+                        Icons.family_restroom, color: Theme.of(context).
+                      colorScheme.secondary,),
+                      SizedBox(
+                        width:6,
+                      ),
+                      Text(TripTypeText)
+                    ],
+                  ),
+
+
+
+                ],
+
+
+              ),
+            ),
+            
           ],
-
-
         ),
 
       ),
-
-
 
     );
   }
