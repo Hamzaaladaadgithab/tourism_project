@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tourism/screens/categories_screen.dart';
 import 'package:tourism/screens/category_trips_screen.dart';
+import 'package:tourism/screens/trip_detail_screen.dart';
+import './screens/category_trips_screen.dart';
+import './screens/trip_detail_screen.dart';
+
 
 
 void main() {
@@ -24,7 +28,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => CategoriesScreen(),
         CategoryTripsScreen.routeName: (context) => CategoryTripsScreen(),
-      },
+        TripDetailScreen.screenRoute:(context) => TripDetailScreen(),
+            },
     );
   }
 }

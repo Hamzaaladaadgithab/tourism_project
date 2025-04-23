@@ -1,10 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import '../screens/trip_detail_screen.dart';
 import '../models/trip.dart';
 
 class TripItem extends StatelessWidget { 
-
+  final String id;
   final String title;
   final String imageUrl;
   final List<String> duration;
@@ -12,6 +13,7 @@ class TripItem extends StatelessWidget {
   final Season season;
 
   TripItem({
+     required this.id,
     required this.title,
     required this.imageUrl,
     required this.duration,
@@ -57,19 +59,20 @@ String get TripTypeText {
 
 
   
-   void selectTrip(){
+   void selectTrip(BuildContext context){
 
-    // Navigator.of().pushNamed();
+     Navigator.of(context).pushNamed(TripDetailScreen.screenRoute,
+     arguments:id);
    }
    
   @override
   Widget build(BuildContext context) {
     return InkWell( 
-
-      onTap:selectTrip,
+      onTap:() => selectTrip(context),
       child: Card(
         shape:RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
+          
 
         ),
 
@@ -83,6 +86,8 @@ String get TripTypeText {
                   borderRadius:BorderRadius.only(
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15),
+                    
+                    
 
                   ),
                   child: Image.network(
@@ -98,11 +103,13 @@ String get TripTypeText {
                   padding:EdgeInsets.symmetric(
                     vertical:10,
                     horizontal: 20,
+             
                   ),
                   decoration:BoxDecoration(
                     gradient:LinearGradient(
                     begin:Alignment.topCenter,
                     end:Alignment.bottomCenter,
+                   
                     colors:[
                       Colors.black.withAlpha(0),
                       Colors.black.withAlpha(204),
@@ -129,8 +136,7 @@ String get TripTypeText {
                 children: [  
                   Row(
                     children: [
-                      Icon(Icons.today , color: Theme.of(context).
-                      colorScheme.secondary,),
+                      Icon(Icons.today, color: Colors.amber),
                       SizedBox(
                         width:6,
                       ),
@@ -140,8 +146,7 @@ String get TripTypeText {
                   Row(
                     children: [
                       Icon(
-                        Icons.wb_sunny, color: Theme.of(context).
-                      colorScheme.secondary,),
+                        Icons.wb_sunny, color: Colors.amber),
                       SizedBox(
                         width:6,
                       ),
@@ -152,8 +157,7 @@ String get TripTypeText {
                    Row(
                     children: [
                       Icon(
-                        Icons.family_restroom, color: Theme.of(context).
-                      colorScheme.secondary,),
+                        Icons.family_restroom, color: Colors.amber),
                       SizedBox(
                         width:6,
                       ),

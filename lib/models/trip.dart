@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 
-
-
 enum Season {
   winter,
   spring,

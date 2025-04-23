@@ -23,10 +23,12 @@ class CategoryTripsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(categoryTitle),
         backgroundColor: Colors.amber,
+        centerTitle: true,
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
           return  TripItem(
+            id:filteredTrips[index].id,
             title:filteredTrips[index].title, 
             imageUrl:filteredTrips[index].imageUrl,
             duration:filteredTrips[index].duration,

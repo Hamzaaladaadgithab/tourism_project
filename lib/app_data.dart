@@ -106,7 +106,7 @@ const Trips_data = const [
     season: Season.winter,
     imageUrl:
         'https://images.unsplash.com/photo-1592221912790-2b4df8882ea9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzd8fG1vdW5hdGluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    duration: ['45 gün'],
+    duration: ['35 gün'],
     activities: [
       'Tarihi yerleri ziyaret',
       'Yürüyüş turu',
@@ -132,7 +132,7 @@ const Trips_data = const [
     season: Season.spring,
     imageUrl:
         'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8bGFrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-    duration: ['60 gün'],
+    duration: ['25 gün'],
     activities: [
       'Tarihi yerleri ziyaret',
       'Yürüyüş turu',
@@ -184,7 +184,7 @@ const Trips_data = const [
     season: Season.summer,
     imageUrl:
         'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bGFrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
-    duration: ['240 gün'],
+    duration: ['24 gün'],
     activities: [
       'Tarihi yerleri ziyaret',
       'Yürüyüş turu',

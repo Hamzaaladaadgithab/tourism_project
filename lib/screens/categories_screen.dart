@@ -11,7 +11,7 @@ class CategoriesScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.amber,
         title: Text(
-          'TURİSTİK REHBERİ',
+          'TOURİSM REHBERİ',
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
