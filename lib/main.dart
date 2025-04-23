@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tourism/screens/categories_screen.dart';
 import 'package:tourism/screens/category_trips_screen.dart';
+import './screens/tabs_screen.dart';
 import 'package:tourism/screens/trip_detail_screen.dart';
 import './screens/category_trips_screen.dart';
 import './screens/trip_detail_screen.dart';
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
       //home:CategoriesScreen(),
       initialRoute: '/',
       routes: {
-        '/': (context) => CategoriesScreen(),
+        // bu artık ana sayfamız yani app ilk çalıştığında bunu çıkıyor 
+        '/': (context) => TabsScreen(),
         CategoryTripsScreen.routeName: (context) => CategoryTripsScreen(),
         TripDetailScreen.screenRoute:(context) => TripDetailScreen(),
             },

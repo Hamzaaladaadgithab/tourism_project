@@ -6,6 +6,9 @@ class CategoryItem extends StatelessWidget {
   final String title;
   final String imageUrl;
 
+
+  // bu sayfa ana sayfa içi oluşturması için 
+
   CategoryItem(this.id, this.title, this.imageUrl);
 
   void selectCategory(BuildContext context) {
@@ -55,8 +58,8 @@ class CategoryItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   child: Image.network(
                     imageUrl,
-                    height: 120,
-                    width: 120,
+                    height:120,
+                    width:160,
                     fit: BoxFit.cover,
                   ),
                 ),

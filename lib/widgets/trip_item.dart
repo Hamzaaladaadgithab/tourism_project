@@ -164,12 +164,7 @@ String get TripTypeText {
                       Text(TripTypeText)
                     ],
                   ),
-
-
-
                 ],
-
-
               ),
             ),
             
