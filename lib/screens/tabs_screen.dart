@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/app_drawer.dart';
 import './categories_screen.dart';
 import './favorites_scrren.dart'; 
 
@@ -56,9 +57,8 @@ class _TabsScreenState extends State<TabsScreen> {
           ),
         ),
     ),
-    drawer: Drawer(
-      child:Text('deneme...'),
-    ),
+     drawer: AppDrawer(),
+     
     body:_screens[_selectedScreenIndex]['Screen'] as Widget,
 
   bottomNavigationBar:BottomNavigationBar(

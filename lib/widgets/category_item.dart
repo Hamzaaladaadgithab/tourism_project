@@ -59,7 +59,7 @@ class CategoryItem extends StatelessWidget {
                   child: Image.network(
                     imageUrl,
                     height:120,
-                    width:160,
+                    width:150,
                     fit: BoxFit.cover,
                   ),
                 ),
