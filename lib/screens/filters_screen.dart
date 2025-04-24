@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 import '../widgets/app_drawer.dart';
 
-class FiltersScreen extends StatelessWidget {
+class FiltersScreen extends StatefulWidget {
   const FiltersScreen({super.key});
 
-  static const screenRoute = '/filters'; // Static route name
+  static const screenRoute = '/filters';
+
+  @override
+  State<FiltersScreen> createState() => _FiltersScreenState();
+}
+
+class _FiltersScreenState extends State<FiltersScreen> {
+  var _isInSommer = false;
+  var _isInWinter = false;
+  var _isForFamily = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amber,
-        title: Text(
+        title: const Text(
           'Filtrele',
           style: TextStyle(
             color: Colors.black,
@@ -20,13 +29,61 @@ class FiltersScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        centerTitle: true, // Title'ı ortalar
+        centerTitle: true,
       ),
-      drawer: AppDrawer(),
-      body: const Center(
-        child: Text(
-          'Bu filtreleme sayfası...',
-          style: TextStyle(fontSize: 18),
+      drawer: const AppDrawer(),
+      body: Center(
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView(
+                children: [
+                  SwitchListTile(
+                    title: const Text(
+                      'YAZ GEZİLERİ',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: const Text('Sadece Yaz Mevsiminde Geziler Göster!'),
+                    value: _isInSommer,
+                    activeColor: Colors.amber, // Buton açıkken rengi
+                    onChanged: (newValue) {
+                      setState(() {
+                        _isInSommer = newValue;
+                      });
+                    },
+                  ),
+                  SwitchListTile(
+                    title: const Text(
+                      'KIŞ GEZİLERİ',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: const Text('Sadece Kış Mevsiminde Geziler Göster!'),
+                    value: _isInWinter,
+                    activeColor: Colors.amber,
+                    onChanged: (newValue) {
+                      setState(() {
+                        _isInWinter = newValue;
+                      });
+                    },
+                  ),
+                  SwitchListTile(
+                    title: const Text(
+                      'AİLE İÇİN',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: const Text('Sadece Aileye Uygun Geziler Göster!'),
+                    value: _isForFamily,
+                    activeColor: Colors.amber,
+                    onChanged: (newValue) {
+                      setState(() {
+                        _isForFamily = newValue;
+                      });
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
