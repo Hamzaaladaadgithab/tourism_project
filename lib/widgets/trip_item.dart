@@ -142,7 +142,7 @@ String get TripTypeText {
                 children: [  
                   Row(
                     children: [
-                      Icon(Icons.today, color: Colors.amber),
+                      Icon(Icons.today, color: Colors.blue),
                       SizedBox(
                         width:6,
                       ),
@@ -152,7 +152,7 @@ String get TripTypeText {
                   Row(
                     children: [
                       Icon(
-                        Icons.wb_sunny, color: Colors.amber),
+                        Icons.wb_sunny, color: Colors.blue),
                       SizedBox(
                         width:6,
                       ),
@@ -163,7 +163,7 @@ String get TripTypeText {
                    Row(
                     children: [
                       Icon(
-                        Icons.family_restroom, color: Colors.amber),
+                        Icons.family_restroom, color: Colors.blue),
                       SizedBox(
                         width:6,
                       ),

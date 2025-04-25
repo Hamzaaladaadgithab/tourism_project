@@ -49,10 +49,10 @@ class _TabsScreenState extends State<TabsScreen> {
     return Scaffold(
        appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.blue,
         title: Text(_screens[_selectedScreenIndex]['Title'] as String,
             style:TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -63,7 +63,7 @@ class _TabsScreenState extends State<TabsScreen> {
 
   bottomNavigationBar:BottomNavigationBar(
     onTap: _selectScreen,
-    backgroundColor: Colors.amber,
+    backgroundColor: Colors.blue,
     selectedItemColor: Theme.of(context).colorScheme.secondary,
     unselectedItemColor: Colors.white,
     currentIndex: _selectedScreenIndex,

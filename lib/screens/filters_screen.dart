@@ -19,11 +19,11 @@ class _FiltersScreenState extends State<FiltersScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.blue,
         title: const Text(
           'Filtrele',
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 26,
             fontFamily: 'ElMessiri',
             fontWeight: FontWeight.bold,
@@ -45,7 +45,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                     ),
                     subtitle: const Text('Sadece Yaz Mevsiminde Geziler Göster!'),
                     value: _isInSommer,
-                    activeColor: Colors.amber, // Buton açıkken rengi
+                    activeColor: Colors.blue, // Buton açıkken rengi
                     onChanged: (newValue) {
                       setState(() {
                         _isInSommer = newValue;
@@ -59,7 +59,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                     ),
                     subtitle: const Text('Sadece Kış Mevsiminde Geziler Göster!'),
                     value: _isInWinter,
-                    activeColor: Colors.amber,
+                    activeColor: Colors.blue,
                     onChanged: (newValue) {
                       setState(() {
                         _isInWinter = newValue;
@@ -73,7 +73,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                     ),
                     subtitle: const Text('Sadece Aileye Uygun Geziler Göster!'),
                     value: _isForFamily,
-                    activeColor: Colors.amber,
+                    activeColor: Colors.blue,
                     onChanged: (newValue) {
                       setState(() {
                         _isForFamily = newValue;

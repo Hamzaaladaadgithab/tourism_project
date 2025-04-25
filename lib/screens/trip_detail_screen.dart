@@ -12,7 +12,7 @@ class TripDetailScreen extends StatelessWidget {
             child:Text(
                   titleText,
                   style: TextStyle(
-                  color: Colors.amber,
+                  color: Colors.blue,
                   fontSize: 20,
                  fontWeight: FontWeight.bold,
                  ),
@@ -43,7 +43,7 @@ class TripDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(selectedTrip.title),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.blue,
         centerTitle: true,
       ),
 

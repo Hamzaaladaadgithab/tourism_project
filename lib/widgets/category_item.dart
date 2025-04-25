@@ -34,8 +34,8 @@ class CategoryItem extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Colors.amber.withOpacity(0.7),
-                  Colors.amber,
+                  Colors.blue.withOpacity(0.7),
+                  Colors.blue,
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -50,7 +50,7 @@ class CategoryItem extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(height: 10),

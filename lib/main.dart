@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title:'Tourism App',
       theme:ThemeData(
-        primarySwatch: Colors.amber,
+        primarySwatch: Colors.blue,
 
       ),
 

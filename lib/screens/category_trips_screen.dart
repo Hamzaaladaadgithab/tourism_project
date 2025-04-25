@@ -43,7 +43,7 @@ class _CategoryTripsScreenState extends State<CategoryTripsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(categoryTitle),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.blue,
         centerTitle: true,
       ),
       body: ListView.builder(

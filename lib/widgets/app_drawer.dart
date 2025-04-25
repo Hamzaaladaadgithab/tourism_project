@@ -36,10 +36,10 @@ class AppDrawer extends StatelessWidget {
             width: double.infinity,
             padding:EdgeInsets.only(top:40),
             alignment: Alignment.center,
-            color:Colors.amber,
+            color:Colors.blue,
             child: Text('TOURİSM REHBERİ',
              style:TextStyle(
-            color:Colors.black,
+            color:Colors.white,
              fontSize:26,
              fontFamily:'ElMessiri',
              fontWeight:FontWeight.bold,
