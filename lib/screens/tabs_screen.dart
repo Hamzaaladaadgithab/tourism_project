@@ -57,7 +57,8 @@ class _TabsScreenState extends State<TabsScreen> {
           ),
         ),
     ),
-     drawer: AppDrawer(),
+    drawer: AppDrawer(),
+    
      
     body:_screens[_selectedScreenIndex]['Screen'] as Widget,
 

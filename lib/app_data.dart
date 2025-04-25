@@ -120,7 +120,7 @@ const Trips_data = const [
       'Serbest keşif.',
       'Dönüşe hazırlık.'
     ],
-    isINsummer: false,
+    isINsummer: true,
     isInwinter: true,
     isforfamilies: false,
   ),
@@ -250,7 +250,7 @@ const Trips_data = const [
       'Yemek ve dinlenme.',
       'Dönüş.'
     ],
-    isINsummer: true,
+    isINsummer: false,
     isInwinter: true,
     isforfamilies: false,
   ),
@@ -382,7 +382,7 @@ const Trips_data = const [
     'Manzara ve fotoğraf molaları.',
   ],
   isINsummer: true,
-  isInwinter: true,
+  isInwinter: false,
   isforfamilies: true,
 ),
 Trip(
@@ -409,7 +409,7 @@ Trip(
   ],
   isINsummer: true,
   isInwinter: true,
-  isforfamilies: true,
+  isforfamilies:false,
 ),
 Trip(
   id: 'm15',
@@ -460,7 +460,7 @@ Trip(
     'Manzara ve fotoğraf molaları.',
   ],
   isINsummer: true,
-  isInwinter: true,
+  isInwinter: false,
   isforfamilies: true,
 ),
 Trip(
@@ -485,7 +485,7 @@ Trip(
     'Yemek ve dinlenme.',
     'Manzara ve fotoğraf molaları.',
   ],
-  isINsummer: true,
+  isINsummer:false,
   isInwinter: true,
   isforfamilies: true,
 ),

@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import '../models/trip.dart';
 import '../widgets/trip_item.dart';
-import '../app_data.dart';
+
 
 class CategoryTripsScreen extends StatefulWidget {
   static const routeName = '/category-trips';
+ 
+  final List<Trip> availabelTrips; 
+
+  CategoryTripsScreen(this.availabelTrips);
 
   @override
   _CategoryTripsScreenState createState() => _CategoryTripsScreenState();
@@ -23,7 +27,7 @@ class _CategoryTripsScreenState extends State<CategoryTripsScreen> {
       final categoryId = routeArgs['id'];
       categoryTitle = routeArgs['title'] ?? 'Kategori Gezileri';
 
-      displayTrips = Trips_data.where((trip) {
+      displayTrips = widget.availabelTrips.where((trip) {
         return trip.categories.contains(categoryId);
       }).toList();
 

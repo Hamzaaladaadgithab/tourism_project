@@ -44,6 +44,7 @@ class AppDrawer extends StatelessWidget {
              fontFamily:'ElMessiri',
              fontWeight:FontWeight.bold,
 
+
              ),
           ),
           ),
