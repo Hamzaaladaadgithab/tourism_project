@@ -4,7 +4,15 @@ import 'package:tourism/app_data.dart';
 
 class TripDetailScreen extends StatelessWidget {
   static const screenRoute = '/trip-detail';
+
+  final Function(String) mangeFavorite; 
+  final Function(String) isFavorite;
+
   
+  TripDetailScreen(this.mangeFavorite, this.isFavorite);
+
+
+
   Widget buidlSectionTitle( titleText){
     return Container(
             margin:EdgeInsets.symmetric(horizontal: 10, vertical:10),
@@ -98,10 +106,10 @@ class TripDetailScreen extends StatelessWidget {
       ),
     ),
     floatingActionButton: FloatingActionButton(
-      child: Icon(Icons.delete),
-      onPressed: () {
-         Navigator.of(context).pop(tripId);
-      },
+      child: Icon(
+        isFavorite(tripId) ? Icons.star : Icons.star_border 
+      ),
+      onPressed: () => mangeFavorite(tripId),
     ),
     );
     

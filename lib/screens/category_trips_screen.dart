@@ -36,12 +36,6 @@ class _CategoryTripsScreenState extends State<CategoryTripsScreen> {
     super.didChangeDependencies();
   }
 
-  void _removeTrip(String tripId) {
-    setState(() {
-      displayTrips.removeWhere((trip) => trip.id == tripId);
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +54,7 @@ class _CategoryTripsScreenState extends State<CategoryTripsScreen> {
             duration: displayTrips[index].duration,
             season: displayTrips[index].season,
             tripType: displayTrips[index].tripType,
-            removeItem: _removeTrip,
+           
           );
         },
       ),

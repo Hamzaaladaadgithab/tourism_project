@@ -25,7 +25,8 @@ class _MyAppState extends State<MyApp> {
     'family':false,
   };
 
-  List<Trip>_availableTrips = Trips_data;
+  List<Trip>_availableTrips = Trips_data; 
+   List<Trip>_favoriteTrips = [];
 
   void _changeFilters(Map<String , bool> filterData){
     setState(() {
@@ -46,6 +47,29 @@ class _MyAppState extends State<MyApp> {
     });
 
   }
+   
+  void _mangeFavorite(String tripId){
+
+     final existingIndex = _favoriteTrips.indexWhere((trip) => trip.id == tripId);
+
+     if(existingIndex >= 0 ){
+
+      setState(() {
+        _favoriteTrips.removeAt(existingIndex);
+      });
+     } else{
+      setState(() {
+        _favoriteTrips.add(Trips_data.firstWhere((trip) => trip.id == tripId),
+        );
+      });
+     }
+  }
+
+  bool _isFovarite(String id){
+      return _favoriteTrips.any((trip) => trip.id ==id);
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,10 +79,10 @@ class _MyAppState extends State<MyApp> {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => TabsScreen(), // ana sayfa denir
+        '/': (context) => TabsScreen(_favoriteTrips), // ana sayfa denir
         CategoryTripsScreen.routeName: (context) => CategoryTripsScreen(
-          _availableTrips),
-        TripDetailScreen.screenRoute: (context) => TripDetailScreen(),
+          _availableTrips ),
+        TripDetailScreen.screenRoute: (context) => TripDetailScreen(_mangeFavorite, _isFovarite),
         FiltersScreen.screenRoute: (context) => FiltersScreen(_filters ,
         _changeFilters),
       },

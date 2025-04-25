@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import '../widgets/app_drawer.dart';
 import './categories_screen.dart';
 import './favorites_scrren.dart'; 
-
+import '../models/trip.dart';
 
 
 // bu artık ana sayfamız...
 
 class TabsScreen extends StatefulWidget {
-  const TabsScreen({super.key});
-
-
+  final List<Trip> favoriteTrips;
+  
+  const TabsScreen(this.favoriteTrips, {super.key});
 
   @override
   State<TabsScreen> createState() => _TabsScreenState();
@@ -29,22 +29,30 @@ class _TabsScreenState extends State<TabsScreen> {
   int _selectedScreenIndex=0;
 
 
-  final List<Map<String, dynamic>> _screens=[
-     {
+  late List<Map<String, dynamic>> _screens;
+     
+  
+ 
+
+  @override
+  void initState() { 
+     _screens = [{
       'Screen':CategoriesScreen(),
       'Title':'GEZİ KATEGORİLERİ',
 
      },
       {
-      'Screen': FavoritesScreen(),
+      'Screen': FavoritesScreen(widget.favoriteTrips),
       'Title':'GEZİ FAVORİLERİ',
       
      },
   ];
 
-
+    super.initState();
+  } 
 
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar(
